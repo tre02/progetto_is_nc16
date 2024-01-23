@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
     <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultCasing>mixed/mixed</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <Grants>|root||root|localhost|ALTER|G
@@ -993,578 +993,362 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="information_schema">
+    <schema id="288" parent="1" name="Ticket4You">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="289" parent="1" name="information_schema">
       <Current>1</Current>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="289" parent="1" name="mysql">
+    <schema id="290" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="290" parent="1" name="performance_schema">
+    <schema id="291" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="simesycar">
+    <schema id="292" parent="1" name="simesy">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="292" parent="1" name="sisyshop">
+    <schema id="293" parent="1" name="simesycar">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="ticket4you">
+    <schema id="294" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="294" parent="1" name="mysql.infoschema">
+    <user id="295" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="295" parent="1" name="mysql.session">
+    <user id="296" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="296" parent="1" name="mysql.sys">
+    <user id="297" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="297" parent="1" name="root">
+    <user id="298" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="298" parent="293" name="acquistare">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="299" parent="289" name="COLUMN_PRIVILEGES">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="299" parent="293" name="amministratore">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="300" parent="289" name="ENGINES">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="300" parent="293" name="appartenere">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="301" parent="289" name="INNODB_BUFFER_PAGE">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="301" parent="293" name="calendario">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="302" parent="289" name="INNODB_BUFFER_PAGE_LRU">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="302" parent="293" name="cercare">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="303" parent="289" name="INNODB_BUFFER_POOL_STATS">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="303" parent="293" name="effettuare">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="304" parent="289" name="INNODB_CACHED_INDEXES">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="304" parent="293" name="evento">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="305" parent="289" name="INNODB_CMP">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="305" parent="293" name="organizzatore">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="306" parent="289" name="INNODB_CMPMEM">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="306" parent="293" name="pagamento">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="307" parent="289" name="INNODB_CMPMEM_RESET">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="307" parent="293" name="possedere">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="308" parent="289" name="INNODB_CMP_PER_INDEX">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="308" parent="293" name="titolo">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="309" parent="289" name="INNODB_CMP_PER_INDEX_RESET">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="309" parent="293" name="utente">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="310" parent="289" name="INNODB_CMP_RESET">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="310" parent="293" name="utente_registrato">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="311" parent="289" name="INNODB_COLUMNS">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <table id="311" parent="293" name="vedere">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <table id="312" parent="289" name="INNODB_FT_BEING_DELETED">
+      <Engine>memory</Engine>
+      <System>1</System>
     </table>
-    <column id="312" parent="298" name="ID_utente">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="313" parent="298" name="ID_titolo">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="314" parent="298" name="acquistare_ibfk_1">
-      <ColNames>ID_utente</ColNames>
-      <RefColNames>ID_utente</RefColNames>
-      <RefTableName>utente</RefTableName>
-    </foreign-key>
-    <foreign-key id="315" parent="298" name="acquistare_ibfk_2">
-      <ColNames>ID_titolo</ColNames>
-      <RefColNames>ID_titolo</RefColNames>
-      <RefTableName>titolo</RefTableName>
-    </foreign-key>
-    <index id="316" parent="298" name="PRIMARY">
-      <ColNames>ID_utente
-ID_titolo</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="317" parent="298" name="ID_titolo">
-      <ColNames>ID_titolo</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="318" parent="298" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="319" parent="299" name="ID_am">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="320" parent="299" name="orario_inizio_sessione">
-      <DasType>datetime|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="321" parent="299" name="orario_fine_sessione">
-      <DasType>datetime|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="322" parent="299" name="numero_telefono_am">
-      <DasType>varchar(20)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="323" parent="299" name="PRIMARY">
-      <ColNames>ID_am</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="324" parent="299" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="325" parent="300" name="ID_titolo">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="326" parent="300" name="ID_pagamento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="327" parent="300" name="appartenere_ibfk_1">
-      <ColNames>ID_titolo</ColNames>
-      <RefColNames>ID_titolo</RefColNames>
-      <RefTableName>titolo</RefTableName>
-    </foreign-key>
-    <foreign-key id="328" parent="300" name="appartenere_ibfk_2">
-      <ColNames>ID_pagamento</ColNames>
-      <RefColNames>ID_pagamento</RefColNames>
-      <RefTableName>pagamento</RefTableName>
-    </foreign-key>
-    <index id="329" parent="300" name="PRIMARY">
-      <ColNames>ID_titolo
-ID_pagamento</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="330" parent="300" name="ID_pagamento">
-      <ColNames>ID_pagamento</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="331" parent="300" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="332" parent="301" name="ID_calendario">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="333" parent="301" name="ID_evento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="334" parent="301" name="data_calendario">
-      <DasType>date|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <foreign-key id="335" parent="301" name="calendario_ibfk_1">
-      <ColNames>ID_evento</ColNames>
-      <RefColNames>ID_evento</RefColNames>
-      <RefTableName>evento</RefTableName>
-    </foreign-key>
-    <index id="336" parent="301" name="PRIMARY">
-      <ColNames>ID_calendario</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="337" parent="301" name="ID_evento">
-      <ColNames>ID_evento</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="338" parent="301" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="339" parent="302" name="ID_utente">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="340" parent="302" name="ID_evento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="341" parent="302" name="cercare_ibfk_1">
-      <ColNames>ID_utente</ColNames>
-      <RefColNames>ID_utente</RefColNames>
-      <RefTableName>utente</RefTableName>
-    </foreign-key>
-    <foreign-key id="342" parent="302" name="cercare_ibfk_2">
-      <ColNames>ID_evento</ColNames>
-      <RefColNames>ID_evento</RefColNames>
-      <RefTableName>evento</RefTableName>
-    </foreign-key>
-    <index id="343" parent="302" name="PRIMARY">
-      <ColNames>ID_utente
-ID_evento</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="344" parent="302" name="ID_evento">
-      <ColNames>ID_evento</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="345" parent="302" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="346" parent="303" name="ID_utente">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="347" parent="303" name="ID_pagamento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="348" parent="303" name="effettuare_ibfk_1">
-      <ColNames>ID_utente</ColNames>
-      <RefColNames>ID_utente</RefColNames>
-      <RefTableName>utente</RefTableName>
-    </foreign-key>
-    <foreign-key id="349" parent="303" name="effettuare_ibfk_2">
-      <ColNames>ID_pagamento</ColNames>
-      <RefColNames>ID_pagamento</RefColNames>
-      <RefTableName>pagamento</RefTableName>
-    </foreign-key>
-    <index id="350" parent="303" name="PRIMARY">
-      <ColNames>ID_utente
-ID_pagamento</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="351" parent="303" name="ID_pagamento">
-      <ColNames>ID_pagamento</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="352" parent="303" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="353" parent="304" name="ID_evento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="354" parent="304" name="posti_disponibili">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="355" parent="304" name="data">
-      <DasType>date|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="356" parent="304" name="luogo">
-      <DasType>varchar(100)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="357" parent="304" name="ora">
-      <DasType>time|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="358" parent="304" name="tipo">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <index id="359" parent="304" name="PRIMARY">
-      <ColNames>ID_evento</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="360" parent="304" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="361" parent="305" name="ID_or">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="362" parent="305" name="eventi_organizzati">
-      <DasType>varchar(100)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="363" parent="305" name="piva">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="364" parent="305" name="indirizzo_or">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="365" parent="305" name="numero_telefono_or">
-      <DasType>varchar(20)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <index id="366" parent="305" name="PRIMARY">
-      <ColNames>ID_or</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="367" parent="305" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="368" parent="306" name="ID_pagamento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="369" parent="306" name="tipo_pagamento">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="370" parent="306" name="somma">
-      <DasType>float|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="371" parent="306" name="stato_pagamento">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="372" parent="306" name="PRIMARY">
-      <ColNames>ID_pagamento</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="373" parent="306" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="374" parent="307" name="ID_evento">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="375" parent="307" name="ID_calendario">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="376" parent="307" name="possedere_ibfk_1">
-      <ColNames>ID_evento</ColNames>
-      <RefColNames>ID_evento</RefColNames>
-      <RefTableName>evento</RefTableName>
-    </foreign-key>
-    <foreign-key id="377" parent="307" name="possedere_ibfk_2">
-      <ColNames>ID_calendario</ColNames>
-      <RefColNames>ID_calendario</RefColNames>
-      <RefTableName>calendario</RefTableName>
-    </foreign-key>
-    <index id="378" parent="307" name="PRIMARY">
-      <ColNames>ID_evento
-ID_calendario</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="379" parent="307" name="ID_calendario">
-      <ColNames>ID_calendario</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="380" parent="307" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="381" parent="308" name="ID_titolo">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="382" parent="308" name="prezzo">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="383" parent="308" name="nome">
-      <DasType>varchar(100)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="384" parent="308" name="cognome">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="385" parent="308" name="posto_prenotato">
-      <DasType>varchar(100)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <index id="386" parent="308" name="PRIMARY">
-      <ColNames>ID_titolo</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="387" parent="308" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="388" parent="309" name="ID_utente">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="389" parent="309" name="nome">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="390" parent="309" name="cognome">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="391" parent="309" name="email">
-      <DasType>varchar(100)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="392" parent="309" name="password">
-      <DasType>varchar(100)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <index id="393" parent="309" name="PRIMARY">
-      <ColNames>ID_utente</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="394" parent="309" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="395" parent="310" name="ID_utente_r">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="396" parent="310" name="data_nascita">
-      <DasType>date|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="397" parent="310" name="indirizzo_utr">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="398" parent="310" name="numero_telefono_utr">
-      <DasType>varchar(20)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="399" parent="310" name="PRIMARY">
-      <ColNames>ID_utente_r</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="400" parent="310" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="401" parent="311" name="ID_utente">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="402" parent="311" name="ID_calendario">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="403" parent="311" name="vedere_ibfk_1">
-      <ColNames>ID_utente</ColNames>
-      <RefColNames>ID_utente</RefColNames>
-      <RefTableName>utente</RefTableName>
-    </foreign-key>
-    <foreign-key id="404" parent="311" name="vedere_ibfk_2">
-      <ColNames>ID_calendario</ColNames>
-      <RefColNames>ID_calendario</RefColNames>
-      <RefTableName>calendario</RefTableName>
-    </foreign-key>
-    <index id="405" parent="311" name="PRIMARY">
-      <ColNames>ID_utente
-ID_calendario</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="406" parent="311" name="ID_calendario">
-      <ColNames>ID_calendario</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="407" parent="311" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
+    <table id="313" parent="289" name="INNODB_FT_CONFIG">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="314" parent="289" name="INNODB_FT_DEFAULT_STOPWORD">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="315" parent="289" name="INNODB_FT_DELETED">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="316" parent="289" name="INNODB_FT_INDEX_CACHE">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="317" parent="289" name="INNODB_FT_INDEX_TABLE">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="318" parent="289" name="INNODB_INDEXES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="319" parent="289" name="INNODB_METRICS">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="320" parent="289" name="INNODB_SESSION_TEMP_TABLESPACES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="321" parent="289" name="INNODB_TABLES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="322" parent="289" name="INNODB_TABLESPACES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="323" parent="289" name="INNODB_TABLESTATS">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="324" parent="289" name="INNODB_TEMP_TABLE_INFO">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="325" parent="289" name="INNODB_TRX">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="326" parent="289" name="INNODB_VIRTUAL">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="327" parent="289" name="OPTIMIZER_TRACE">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="328" parent="289" name="PLUGINS">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="329" parent="289" name="PROCESSLIST">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="330" parent="289" name="PROFILING">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="331" parent="289" name="SCHEMA_PRIVILEGES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="332" parent="289" name="TABLESPACES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="333" parent="289" name="TABLE_PRIVILEGES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <table id="334" parent="289" name="USER_PRIVILEGES">
+      <Engine>memory</Engine>
+      <System>1</System>
+    </table>
+    <view id="335" parent="289" name="ADMINISTRABLE_ROLE_AUTHORIZATIONS">
+      <SourceTextLength>721</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="336" parent="289" name="APPLICABLE_ROLES">
+      <SourceTextLength>4768</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="337" parent="289" name="CHARACTER_SETS">
+      <SourceTextLength>262</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="338" parent="289" name="CHECK_CONSTRAINTS">
+      <SourceTextLength>562</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="339" parent="289" name="COLLATIONS">
+      <SourceTextLength>475</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="340" parent="289" name="COLLATION_CHARACTER_SET_APPLICABILITY">
+      <SourceTextLength>187</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="341" parent="289" name="COLUMNS">
+      <SourceTextLength>3682</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="342" parent="289" name="COLUMNS_EXTENSIONS">
+      <SourceTextLength>787</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="343" parent="289" name="COLUMN_STATISTICS">
+      <SourceTextLength>383</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="344" parent="289" name="ENABLED_ROLES">
+      <SourceTextLength>954</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="345" parent="289" name="EVENTS">
+      <SourceTextLength>1793</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="346" parent="289" name="FILES">
+      <SourceTextLength>2568</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="347" parent="289" name="INNODB_DATAFILES">
+      <SourceTextLength>377</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="348" parent="289" name="INNODB_FIELDS">
+      <SourceTextLength>543</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="349" parent="289" name="INNODB_FOREIGN">
+      <SourceTextLength>935</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="350" parent="289" name="INNODB_FOREIGN_COLS">
+      <SourceTextLength>708</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="351" parent="289" name="INNODB_TABLESPACES_BRIEF">
+      <SourceTextLength>677</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="352" parent="289" name="KEYWORDS">
+      <SourceTextLength>11791</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="353" parent="289" name="KEY_COLUMN_USAGE">
+      <SourceTextLength>2342</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="354" parent="289" name="PARAMETERS">
+      <SourceTextLength>3063</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="355" parent="289" name="PARTITIONS">
+      <SourceTextLength>5704</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="356" parent="289" name="REFERENTIAL_CONSTRAINTS">
+      <SourceTextLength>861</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="357" parent="289" name="RESOURCE_GROUPS">
+      <SourceTextLength>376</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="358" parent="289" name="ROLE_COLUMN_GRANTS">
+      <SourceTextLength>4712</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="359" parent="289" name="ROLE_ROUTINE_GRANTS">
+      <SourceTextLength>4580</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="360" parent="289" name="ROLE_TABLE_GRANTS">
+      <SourceTextLength>4478</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="361" parent="289" name="ROUTINES">
+      <SourceTextLength>4239</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="362" parent="289" name="SCHEMATA">
+      <SourceTextLength>589</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="363" parent="289" name="SCHEMATA_EXTENSIONS">
+      <SourceTextLength>324</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="364" parent="289" name="STATISTICS">
+      <SourceTextLength>2536</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="365" parent="289" name="ST_GEOMETRY_COLUMNS">
+      <SourceTextLength>763</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="366" parent="289" name="ST_SPATIAL_REFERENCE_SYSTEMS">
+      <SourceTextLength>472</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="367" parent="289" name="ST_UNITS_OF_MEASURE">
+      <SourceTextLength>2788</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="368" parent="289" name="TABLES">
+      <SourceTextLength>4565</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="369" parent="289" name="TABLESPACES_EXTENSIONS">
+      <SourceTextLength>123</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="370" parent="289" name="TABLES_EXTENSIONS">
+      <SourceTextLength>486</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="371" parent="289" name="TABLE_CONSTRAINTS">
+      <SourceTextLength>1424</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="372" parent="289" name="TABLE_CONSTRAINTS_EXTENSIONS">
+      <SourceTextLength>619</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="373" parent="289" name="TRIGGERS">
+      <SourceTextLength>1719</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="374" parent="289" name="USER_ATTRIBUTES">
+      <SourceTextLength>253</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="375" parent="289" name="VIEWS">
+      <SourceTextLength>1167</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="376" parent="289" name="VIEW_ROUTINE_USAGE">
+      <SourceTextLength>1007</SourceTextLength>
+      <System>1</System>
+    </view>
+    <view id="377" parent="289" name="VIEW_TABLE_USAGE">
+      <SourceTextLength>810</SourceTextLength>
+      <System>1</System>
+    </view>
   </database-model>
 </dataSource>
