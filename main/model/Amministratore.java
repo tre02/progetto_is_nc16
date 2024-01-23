@@ -7,6 +7,7 @@ public class Amministratore {
 
     public int getId_am() { return id_am; }
 
+
     public void setId_am(int id_am) {
         this.id_am = id_am;
     }
