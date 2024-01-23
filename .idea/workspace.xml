@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b8bbcf69-2c41-485f-a08c-944cc9fffdf8" name="Changes" comment="servlet EventoInformationServlet.java">
       <changelist_data name="Tre02" email="tresy.sorrentino02@gmail.com" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="1e27384d-b1fc-41f0-b469-4949bf9b9c90" name="Changes" comment="servlet RicercaServlet.java">
+      <change afterPath="$PROJECT_DIR$/main/controller/TitoloServlet.java" afterDir="false" />
+>>>>>>> origin/main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +41,11 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
+<<<<<<< HEAD
         <option name="accountId" value="54d5523a-df7e-4431-91c5-21c3e7745008" />
+=======
+        <option name="accountId" value="546ad374-d76f-4031-b2f6-4c762b8b8ca5" />
+>>>>>>> origin/main
         <option name="url" value="https://github.com/tre02/progetto_is_nc16.git" />
       </UrlAndAccount>
     </option>
@@ -63,6 +75,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< HEAD
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="progetto_is_nc16" />
@@ -78,18 +91,70 @@
       </method>
     </configuration>
   </component>
+=======
+>>>>>>> origin/main
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b8bbcf69-2c41-485f-a08c-944cc9fffdf8" name="Changes" comment="" />
+      <changelist id="1e27384d-b1fc-41f0-b469-4949bf9b9c90" name="Changes" comment="servlet EventoInformationServlet.java" />
       <created>1705682685907</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705682685907</updated>
       <workItem from="1705682687828" duration="301000" />
+<<<<<<< HEAD
       <workItem from="1706026464729" duration="775000" />
       <workItem from="1706027727082" duration="1131000" />
+=======
+      <workItem from="1706027989635" duration="346000" />
+      <workItem from="1706028391146" duration="336000" />
+      <workItem from="1706028826847" duration="141000" />
+      <workItem from="1706028993010" duration="108000" />
     </task>
+    <task id="LOCAL-00001" summary="servlet EventoInformationServlet.java">
+      <created>1706027560350</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706027560350</updated>
+    </task>
+    <task id="LOCAL-00002" summary="servlet LoginServlet.java">
+      <created>1706028066032</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706028066032</updated>
+    </task>
+    <task id="LOCAL-00003" summary="servlet LoginServlet.java">
+      <created>1706028224807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706028224807</updated>
+    </task>
+    <task id="LOCAL-00004" summary="servlet NotificaServlet.java">
+      <created>1706028450881</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706028450881</updated>
+>>>>>>> origin/main
+    </task>
+    <task id="LOCAL-00005" summary="servlet RegistrazioneServlet.java">
+      <created>1706028900911</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706028900911</updated>
+    </task>
+    <task id="LOCAL-00006" summary="servlet RicercaServlet.java">
+      <created>1706029057269</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706029057269</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +165,7 @@
       <map>
         <entry key="MAIN">
           <value>
+<<<<<<< HEAD
             <State>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
@@ -107,6 +173,9 @@
                 </map>
               </option>
             </State>
+=======
+            <State />
+>>>>>>> origin/main
           </value>
         </entry>
       </map>
@@ -114,6 +183,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="servlet EventoInformationServlet.java" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="servlet EventoInformationServlet.java" />
+=======
+    <MESSAGE value="servlet LoginServlet.java" />
+    <MESSAGE value="servlet NotificaServlet.java" />
+    <MESSAGE value="servlet RegistrazioneServlet.java" />
+    <MESSAGE value="servlet RicercaServlet.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="servlet RicercaServlet.java" />
+>>>>>>> origin/main
   </component>
 </project>
