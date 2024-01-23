@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e27384d-b1fc-41f0-b469-4949bf9b9c90" name="Changes" comment="servlet RicercaServlet.java">
-      <change afterPath="$PROJECT_DIR$/main/controller/TitoloServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="1e27384d-b1fc-41f0-b469-4949bf9b9c90" name="Changes" comment="servlet TitoloServlet.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +71,7 @@
       <workItem from="1706028391146" duration="336000" />
       <workItem from="1706028826847" duration="141000" />
       <workItem from="1706028993010" duration="108000" />
+      <workItem from="1706029121042" duration="93000" />
     </task>
     <task id="LOCAL-00001" summary="servlet EventoInformationServlet.java">
       <created>1706027560350</created>
@@ -116,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706029057269</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="servlet TitoloServlet.java">
+      <created>1706029172378</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706029172378</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +145,7 @@
     <MESSAGE value="servlet NotificaServlet.java" />
     <MESSAGE value="servlet RegistrazioneServlet.java" />
     <MESSAGE value="servlet RicercaServlet.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="servlet RicercaServlet.java" />
+    <MESSAGE value="servlet TitoloServlet.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="servlet TitoloServlet.java" />
   </component>
 </project>
