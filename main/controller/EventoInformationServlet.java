@@ -21,25 +21,26 @@ public class EventoInformationServlet extends HttpServlet {
         if (idEvento == null || idEvento.isEmpty()) {
             out.println("Errore: ID evento mancante nella richiesta");
             return;
+        }
 
-            // Converte l'ID evento da stringa a intero
-            int idEvento = Integer.parseInt(idEventoString);
+        // Converte l'ID evento da stringa a intero
+        int idEvento = Integer.parseInt(idEventoString);
 
-            // Richiede le informazioni sull'evento dal database
-            EventoDAO eventoDAO = new EventoDAO();
-            Evento evento = eventoDAO.doRetrieveById(idEvento);
+        // Richiede le informazioni sull'evento dal database
+        EventoDAO eventoDAO = new EventoDAO();
+        Evento evento = eventoDAO.doRetrieveById(idEvento);
 
-            // Mostra le informazioni dell'evento o un messaggio se non trovato
-            if (evento != null) {
-                out.println("Informazioni sull'evento:");
-                out.println("ID: " + evento.getId_evento());
-                out.println("Posti disponibili: " + evento.getPosti_disponibili());
-                out.println("Data: " + evento.getData_evento());
-                out.println("Luogo: " + evento.getLuogo());
-                out.println("Ora: " + evento.getOra());
-                out.println("Tipo: " + evento.getTipo());
-            } else {
-                out.println("Evento non trovato");
-            }
+        // Mostra le informazioni dell'evento o un messaggio se non trovato
+        if (evento != null) {
+            out.println("Informazioni sull'evento:");
+            out.println("ID: " + evento.getId_evento());
+            out.println("Posti disponibili: " + evento.getPosti_disponibili());
+            out.println("Data: " + evento.getData_evento());
+            out.println("Luogo: " + evento.getLuogo());
+            out.println("Ora: " + evento.getOra());
+            out.println("Tipo: " + evento.getTipo());
+        } else {
+            out.println("Evento non trovato");
         }
     }
+}
