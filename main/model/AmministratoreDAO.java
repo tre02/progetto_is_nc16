@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AmministratoreDAO {
+    //COME ACCEDO AI DAO SENZA COSTRUTTORE RAGA AIUTO
     public Amministratore doRetrieveByEmailPassword(String email, String password){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =

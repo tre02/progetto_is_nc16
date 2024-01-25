@@ -35,4 +35,8 @@ public class Amministratore {
         this.numero_telefono_am = numero_telefono_am;
     }
 
+    public void controllaPagamento(Titolo t){
+        Pagamento p = t.get
+    }
+
 }

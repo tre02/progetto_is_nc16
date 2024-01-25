@@ -6,6 +6,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Utente {
+    // Raga ma questo non doveva essere utente non registrato?
     private int id_utente;
     private String nome;
     private String cognome;

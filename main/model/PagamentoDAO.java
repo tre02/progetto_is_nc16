@@ -6,6 +6,7 @@ import java.util.List;
 
 public class PagamentoDAO {
     public Pagamento doRetrieveById(int id){
+        //COME ACCEDO AI DAO SENZA COSTRUTTORE RAGA AIUTO
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =
                     con.prepareStatement("SELECT id_pagamento, tipo_pagamento, stato_pagamento, somma FROM pagamento WHERE id_pagamento=?");

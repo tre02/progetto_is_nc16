@@ -1,5 +1,7 @@
 package model;
 
+import java.util.logging.Logger;
+
 public class Organizzatore {
     private int id_or;
     private String piva;
@@ -49,5 +51,18 @@ public class Organizzatore {
 
     public void setNumero_telefono_or(String numero_telefono_or) {
         this.numero_telefono_or = numero_telefono_or;
+    }
+    public int creaEvento(int id_evento, int posti_disponibili, String data_evento, String luogo, String ora, String tipo){
+        EventoDAO temp = new EventoDAO;
+        if(!temp.doRetrieveById(id_evento)) {
+            Evento newEvent = new Evento( int id_evento, int posti_disponibili, String data_evento, String luogo, String
+            ora, String tipo);
+            temp.doSave(newEvent);
+            setEventi_organizzati(getEventi_organizzati() + 1);
+            return 1;
+        }
+        else{
+            return 0; //evento già presente nel sistema, non ho fatto tutto il resto dei check che mi sta morendo il pc
+        }
     }
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UtenteDAO {
+    //COME ACCEDO AI DAO SENZA COSTRUTTORE RAGA AIUTO
     public Utente doRetrieveByEmailPassword(String email, String password){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =
