@@ -62,7 +62,8 @@ public class Organizzatore {
             return 1;
         }
         else{
-            return 0; //evento già presente nel sistema, non ho fatto tutto il resto dei check che mi sta morendo il pc
+            //evento già presente nel sistema, non ho fatto tutto il resto dei check che mi sta morendo il pc
+            return 0;
         }
     }
 }
