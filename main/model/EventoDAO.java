@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EventoDAO {
+    //COME ACCEDO AI DAO SENZA COSTRUTTORE RAGA AIUTO
     public Evento doRetrieveById(int id){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =

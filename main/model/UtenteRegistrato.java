@@ -47,5 +47,5 @@ public class UtenteRegistrato {
         this.numero_telefono_utr = numero_telefono_utr;
     }
 
-
+    //Da fare funzione di "pagamento" che avviene in contemporanea al tasto "acquista"
 }

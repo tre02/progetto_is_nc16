@@ -6,6 +6,13 @@ public class Pagamento {
     private String stato_pagamento;
     private double somma;
 
+    public Pagamento(int id_pagamento, String tipo_pagamento, double somma){
+        this.id_pagamento = id_pagamento;
+        this.tipo_pagamento = tipo_pagamento;
+        this.stato_pagamento = false;
+        this.somma = somma;
+    }
+
     public int getId_pagamento() {
         return id_pagamento;
     }
