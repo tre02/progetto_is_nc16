@@ -22,7 +22,6 @@ public class AggiuntaEventoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Evento p = new Evento();
         p.setIdEvento(request.getParameter("ID_evento"));
-        p.setNomeEvento(request.getParameter("Nome_evento"));
         p.setPostidisponibili(request.getIntHeader("posti_disponibili"));
         p.setData(request.getParameter("data"));
         p.setLuogo(request.getParameter("luogo"));
