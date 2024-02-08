@@ -1,3 +1,4 @@
+package model;
 public class Pagamento {
     private int id_pagamento;
     private String tipo_pagamento;
@@ -10,6 +11,8 @@ public class Pagamento {
         this.stato_pagamento = false;
         this.somma = somma;
     }
+
+    public Pagamento(){}
 
     public int getId_pagamento() {
         return id_pagamento;
@@ -27,11 +30,11 @@ public class Pagamento {
         this.tipo_pagamento = tipo_pagamento;
     }
 
-    public String getStato_pagamento() {
+    public boolean getStato_pagamento() {
         return stato_pagamento;
     }
 
-    public void setStato_pagamento(String stato_pagamento) {
+    public void setStato_pagamento(boolean stato_pagamento) {
         this.stato_pagamento = stato_pagamento;
     }
 

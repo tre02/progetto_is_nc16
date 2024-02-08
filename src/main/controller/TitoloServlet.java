@@ -1,12 +1,18 @@
+package controller;
+
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Serial;
+
+import model.*;
 
 @WebServlet("/titoloservlet")
 public class TitoloServlet extends HttpServlet {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -18,13 +24,11 @@ public class TitoloServlet extends HttpServlet {
         if (idTitolo == null || idTitolo.isEmpty()) {
             out.println("Errore: ID titolo mancante nella richiesta");
             return;
-
-            // Converte l'ID titolo da stringa a intero
-            int idEvento = Integer.parseInt(idTitoloString);
+        }
 
             // Richiede le informazioni sul titolo dal database
             TitoloDAO titoloDAO = new TitoloDAO();
-            Titolo titolo = titoloDAO.doRetrieveById(idTitolo);
+            Titolo titolo = titoloDAO.doRetrieveById(Integer.parseInt(idTitolo));
 
             // Mostra le informazioni del titolo o un messaggio se non trovato
             if (titolo != null) {
@@ -39,3 +43,4 @@ public class TitoloServlet extends HttpServlet {
             }
         }
     }
+

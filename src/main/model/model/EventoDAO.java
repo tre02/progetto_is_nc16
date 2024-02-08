@@ -33,13 +33,14 @@ public class EventoDAO {
     public void doSave(Evento evento){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO evento (posti_disponibili, data_evento, luogo, ora, tipo) VALUES (?, ?, ?, ?, ?)",
+                    "INSERT INTO evento (posti_disponibili, data_evento, luogo, ora, tipo, prezzo) VALUES (?, ?, ?, ?, ?, ?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, evento.getPosti_disponibili());
             ps.setString(2, evento.getData_evento());
             ps.setString(3, evento.getLuogo());
             ps.setString(4, evento.getOra());
             ps.setString(5, evento.getTipo());
+            ps.setDouble(6, evento.getPrezzo());
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
             }
@@ -78,13 +79,13 @@ public class EventoDAO {
     public void doUpdate(Evento evento){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "UPDATE evento SET posti_disponibili=?, data_evento=?, luogo=?, ora=?, tipo=? WHERE id_evento=?");
+                    "UPDATE evento SET posti_disponibili=?, data_evento=?, luogo=?, ora=?, tipo=?, prezzo=? WHERE id_evento=?");
             ps.setInt(1, evento.getPosti_disponibili());
             ps.setString(2, evento.getData_evento());
             ps.setString(3, evento.getLuogo());
             ps.setString(4, evento.getOra());
             ps.setString(5, evento.getTipo());
-            ps.setInt(6, evento.getId_evento());
+            ps.setDouble(6, evento.getPrezzo());
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

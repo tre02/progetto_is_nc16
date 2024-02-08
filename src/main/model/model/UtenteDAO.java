@@ -14,7 +14,7 @@ public class UtenteDAO {
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
                 Utente user = new Utente();
-                user.setId_utente(rs.getInt(1));
+                user.setId(rs.getInt(1));
                 user.setNome(rs.getString(2));
                 user.setCognome(rs.getString(3));
                 user.setPassword(rs.getString(4));
@@ -36,7 +36,7 @@ public class UtenteDAO {
             ps.setString(1, utente.getNome());
             ps.setString(2, utente.getCognome());
             ps.setString(3, utente.getPassword());
-            ps.setString(4, utente.getEamil());
+            ps.setString(4, utente.getEmail());
             ps.setBoolean(5,utente.isAdmin());
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -44,7 +44,7 @@ public class UtenteDAO {
             ResultSet rs = ps.getGeneratedKeys();
             rs.next();
             int id_utente = rs.getInt(1);
-            utente.setId_utente(id_utente);
+            utente.setId(id_utente);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -58,7 +58,7 @@ public class UtenteDAO {
             List<Utente> utenti = new ArrayList<>();
             while(rs.next()){
                 Utente user = new Utente();
-                user.setId_utente(rs.getInt(1));
+                user.setId(rs.getInt(1));
                 user.setNome(rs.getString(2));
                 user.setCognome(rs.getString(3));
                 user.setPassword(rs.getString(4));
@@ -80,7 +80,7 @@ public class UtenteDAO {
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
                 Utente user = new Utente();
-                user.setId_utente(rs.getInt(1));
+                user.setId(rs.getInt(1));
                 user.setNome(rs.getString(2));
                 user.setCognome(rs.getString(3));
                 user.setPassword(rs.getString(4));
@@ -101,7 +101,7 @@ public class UtenteDAO {
             ps.setString(1, utente.getNome());
             ps.setString(2, utente.getCognome());
             ps.setString(4, utente.getEmail());
-            ps.setInt(9,utente.getId_utente());
+            ps.setInt(3,utente.getId_utente());
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -116,7 +116,7 @@ public class UtenteDAO {
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
                 Utente user = new Utente();
-                user.setId_utente(rs.getInt(1));
+                user.setId(rs.getInt(1));
                 user.setNome(rs.getString(2));
                 user.setCognome(rs.getString(3));
                 user.setPassword(rs.getString(4));

@@ -1,3 +1,5 @@
+package model;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ public class PagamentoDAO {
                 Pagamento pagamento = new Pagamento();
                 pagamento.setId_pagamento(rs.getInt(1));
                 pagamento.setTipo_pagamento(rs.getString(2));
-                pagamento.setStato_pagamento(rs.getString(3));
+                pagamento.setStato_pagamento(Boolean.parseBoolean(rs.getString(3)));
                 pagamento.setSomma(rs.getDouble(4));
                 return pagamento;
             } else {
@@ -31,7 +33,7 @@ public class PagamentoDAO {
                     "INSERT INTO pagamento (tipo_pagamento, stato_pagamento, somma) VALUES (?, ?, ?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, pagamento.getTipo_pagamento());
-            ps.setString(2, pagamento.getStato_pagamento());
+            ps.setBoolean(2, pagamento.getStato_pagamento());
             ps.setDouble(3, pagamento.getSomma());
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -56,7 +58,7 @@ public class PagamentoDAO {
                 Pagamento pagamento = new Pagamento();
                 pagamento.setId_pagamento(rs.getInt(1));
                 pagamento.setTipo_pagamento(rs.getString(2));
-                pagamento.setStato_pagamento(rs.getString(3));
+                pagamento.setStato_pagamento(Boolean.parseBoolean(rs.getString(3)));
                 pagamento.setSomma(rs.getDouble(4));
                 pagamenti.add(pagamento);
             }
@@ -71,7 +73,7 @@ public class PagamentoDAO {
             PreparedStatement ps = con.prepareStatement(
                     "UPDATE pagamento SET tipo_pagamento=?, stato_pagamento=?, somma=? WHERE id_pagamento=?");
             ps.setString(1, pagamento.getTipo_pagamento());
-            ps.setString(2, pagamento.getStato_pagamento());
+            ps.setBoolean(2, pagamento.getStato_pagamento());
             ps.setDouble(3, pagamento.getSomma());
             ps.setInt(4, pagamento.getId_pagamento());
             ps.executeUpdate();

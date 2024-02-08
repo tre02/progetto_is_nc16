@@ -1,3 +1,4 @@
+package model;
 public class Organizzatore extends Utente{
     private int id_or;
     private String piva;
@@ -6,10 +7,6 @@ public class Organizzatore extends Utente{
     private String numero_telefono_or;
 
     public Organizzatore(){super();}
-
-    public void test(){
-        Organizzatore ty = new Organizzatore();
-    }
 
     public int getId_or() { return id_or; }
 

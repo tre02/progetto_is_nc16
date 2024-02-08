@@ -3,13 +3,15 @@ public class Evento {
     private String nomeEvento;
     private int id_evento;
     private int posti_disponibili;
+    private double prezzo;
     private String data_evento;
     private String luogo;
     private String ora;
     private String tipo;
 
-    public Evento(String nomeEvento,int id_evento, int posti_disponibili, java.lang.String data_evento, java.lang.String luogo, java.lang.String ora, java.lang.String tipo) {
+    public Evento(String nomeEvento,int id_evento, int posti_disponibili, String data_evento, String luogo, String ora, String tipo, double prezzo) {
         this.nomeEvento = nomeEvento;
+        this.prezzo = prezzo;
         this.id_evento = id_evento;
         this.posti_disponibili = posti_disponibili;
         this.data_evento = data_evento;
@@ -19,6 +21,14 @@ public class Evento {
     }
 
     public Evento(){}
+
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
+    }
 
     public int getId_evento() {
         return id_evento;

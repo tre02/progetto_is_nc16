@@ -1,3 +1,5 @@
+package model;
+
 public class UtenteRegistrato extends Utente{
     private int id_utr;
     private String data_nascita;
