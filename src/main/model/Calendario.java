@@ -1,5 +1,3 @@
-package model;
-
 public class Calendario {
     private int id_calendario;
     private int id_evento;

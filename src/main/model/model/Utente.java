@@ -12,7 +12,10 @@ public class Utente {
     private String cognome;
     private String passwordhash;
     private String email;
-    private String admin;
+    private boolean admin;
+    private boolean isOrg;
+
+    public Utente(){}
 
 
     public int getId_utente() {
@@ -20,7 +23,7 @@ public class Utente {
     }
 
     public void setId(int id_utente) {
-        this.id = id_utente;
+        this.id_utente = id_utente;
     }
 
 

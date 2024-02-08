@@ -1,7 +1,6 @@
 package model;
-
 public class Evento {
-    private String nomeEvento
+    private String nomeEvento;
     private int id_evento;
     private int posti_disponibili;
     private String data_evento;

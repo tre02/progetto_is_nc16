@@ -1,12 +1,10 @@
-package model;
-
 public class Titolo {
     private int id_titolo;
     private double prezzo;
     private String nome_t;
     private String cognome_t;
     private String posto_prenotato;
-    private Pagamento pagamento;
+    private final Pagamento pagamento;
 
     public Titolo(int id_titolo, double prezzo, String nome_t, String cognome_t, String posto_prenotato, String metodoDiPagamento){
         this.id_titolo = id_titolo;

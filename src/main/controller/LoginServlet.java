@@ -1,6 +1,5 @@
 package controller;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -8,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Utente;
 import model.UtenteDAO;
+
 import java.io.IOException;
 
 @WebServlet(value = "/Login")
@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("account.jsp?accesso=0");
             }
         }
+        throw new ServletException();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

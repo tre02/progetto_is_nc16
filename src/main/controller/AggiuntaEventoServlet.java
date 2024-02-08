@@ -2,6 +2,7 @@ package controller;
 
 import model.Evento;
 import model.EventoDAO;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -21,16 +22,16 @@ public class AggiuntaEventoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Evento p = new Evento();
-        p.setNomeEvento(request.getParameter("nomeEvento"))
-        p.setIdEvento(request.getParameter("ID_evento"));
-        p.setPostidisponibili(request.getIntHeader("posti_disponibili"));
-        p.setData(request.getParameter("data"));
+        EventoDAO dao = new EventoDAO();
+        p.setNomeEvento(request.getParameter("nomeEvento"));
+        p.setId_evento(Integer.parseInt(request.getParameter("ID_evento")));
+        p.setPosti_disponibili(request.getIntHeader("posti_disponibili"));
+        p.setData_evento(request.getParameter("data"));
         p.setLuogo(request.getParameter("luogo"));
-        p.setOra(request.getIntHeader("ora"));
-        p.setPrezzo(request.getIntHeader("prezzo"));
+        p.setOra(request.getParameter("ora"));
         p.setTipo(request.getParameter("tipo"));
-        if(!doRetrieveById(request.getParameter("ID_evento"))) {
-            EventoDAO.aggiuntaEvento(p);
+        if(dao.doRetrieveById(Integer.parseInt(request.getParameter("ID_evento")))!=null) {
+            dao.doSave(p);
         }else{
             response.sendRedirect(request.getContextPath() + "webapp/error.jsp");
         }

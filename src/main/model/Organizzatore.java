@@ -1,15 +1,15 @@
-package model;
-
-import java.util.logging.Logger;
-
-public class Organizzatore {
+public class Organizzatore extends Utente{
     private int id_or;
     private String piva;
     private String indirizzo_or;
     private String eventi_organizzati;
     private String numero_telefono_or;
 
+    public Organizzatore(){super();}
 
+    public void test(){
+        Organizzatore ty = new Organizzatore();
+    }
 
     public int getId_or() { return id_or; }
 

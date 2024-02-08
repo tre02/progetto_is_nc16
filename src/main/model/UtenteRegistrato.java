@@ -1,17 +1,10 @@
-package model;
-
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 public class UtenteRegistrato extends Utente{
     private int id_utr;
     private String data_nascita;
     private String indirizzo_utr;
     private String numero_telefono_utr;
 
-
+    public UtenteRegistrato(){}
     public int getId_utr() {
         return id_utr;
     }
@@ -46,6 +39,8 @@ public class UtenteRegistrato extends Utente{
     public void setNumero_telefono_utr(String numero_telefono_utr) {
         this.numero_telefono_utr = numero_telefono_utr;
     }
+
+
 
     //Da fare funzione di "pagamento" che avviene in contemporanea al tasto "acquista"
 }

@@ -5,9 +5,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import model.Evento;
-import model.EventoDAO;
-
 @WebServlet("/notificaservlet")
 public class NotificaServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;

@@ -1,9 +1,7 @@
-package model;
-
 public class Pagamento {
     private int id_pagamento;
     private String tipo_pagamento;
-    private String stato_pagamento;
+    private boolean stato_pagamento;
     private double somma;
 
     public Pagamento(int id_pagamento, String tipo_pagamento, double somma){

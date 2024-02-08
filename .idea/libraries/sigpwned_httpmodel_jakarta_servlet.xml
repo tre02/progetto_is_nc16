@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sigpwned.httpmodel.jakarta.servlet" type="repository">
+    <properties maven-id="com.sigpwned:httpmodel-jakarta-servlet:2.0.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sigpwned/httpmodel-jakarta-servlet/2.0.0/httpmodel-jakarta-servlet-2.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sigpwned/httpmodel-core/2.0.0/httpmodel-core-2.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

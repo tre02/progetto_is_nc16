@@ -1,10 +1,11 @@
-public class Amministratore {
+package model;
+public class Amministratore extends Utente{
     private int id_am;
     private String orario_inizio_sessione;
     private String orario_fine_sessione;
     private String numero_telefono_am;
 
-
+    public Amministratore(){super();}
     public int getId_am() { return id_am; }
 
 
@@ -35,8 +36,5 @@ public class Amministratore {
         this.numero_telefono_am = numero_telefono_am;
     }
 
-    public void controllaPagamento(Titolo t){
-        Pagamento p = t.get
-    }
 
 }

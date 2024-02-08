@@ -4,8 +4,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Utente;
-import model.UtenteDAO;
+import Utente;
+import UtenteDAO;
 
 import java.io.IOException;
 

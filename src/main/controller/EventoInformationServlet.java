@@ -1,15 +1,17 @@
+package controller;
+
+import model.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import model.Evento;
-import model.EventoDAO;
+import java.io.Serial;
 
 @WebServlet("/eventoinformationservlet")
 public class EventoInformationServlet extends HttpServlet {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -22,13 +24,9 @@ public class EventoInformationServlet extends HttpServlet {
             out.println("Errore: ID evento mancante nella richiesta");
             return;
         }
-
-        // Converte l'ID evento da stringa a intero
-        int idEvento = Integer.parseInt(idEventoString);
-
         // Richiede le informazioni sull'evento dal database
         EventoDAO eventoDAO = new EventoDAO();
-        Evento evento = eventoDAO.doRetrieveById(idEvento);
+        Evento evento = eventoDAO.doRetrieveById(Integer.parseInt(idEvento));
 
         // Mostra le informazioni dell'evento o un messaggio se non trovato
         if (evento != null) {
