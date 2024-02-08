@@ -21,6 +21,7 @@ public class AggiuntaEventoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Evento p = new Evento();
+        p.setNomeEvento(request.getParameter("nomeEvento"))
         p.setIdEvento(request.getParameter("ID_evento"));
         p.setPostidisponibili(request.getIntHeader("posti_disponibili"));
         p.setData(request.getParameter("data"));
@@ -28,7 +29,11 @@ public class AggiuntaEventoServlet extends HttpServlet {
         p.setOra(request.getIntHeader("ora"));
         p.setPrezzo(request.getIntHeader("prezzo"));
         p.setTipo(request.getParameter("tipo"));
-        EventoDAO.aggiuntaEvento(p);
+        if(!doRetrieveById(request.getParameter("ID_evento"))) {
+            EventoDAO.aggiuntaEvento(p);
+        }else{
+            response.sendRedirect(request.getContextPath() + "webapp/error.jsp");
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("HomeServletAmministratore");
         dispatcher.forward(request, response);
     }

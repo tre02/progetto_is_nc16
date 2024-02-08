@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class UtenteRegistrato {
+public class UtenteRegistrato extends Utente{
     private int id_utr;
     private String data_nascita;
     private String indirizzo_utr;

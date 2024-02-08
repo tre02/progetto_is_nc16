@@ -1,6 +1,7 @@
 package model;
 
 public class Evento {
+    private String nomeEvento
     private int id_evento;
     private int posti_disponibili;
     private String data_evento;
@@ -8,7 +9,8 @@ public class Evento {
     private String ora;
     private String tipo;
 
-    public Evento(int id_evento, int posti_disponibili, java.lang.String data_evento, java.lang.String luogo, java.lang.String ora, java.lang.String tipo) {
+    public Evento(String nomeEvento,int id_evento, int posti_disponibili, java.lang.String data_evento, java.lang.String luogo, java.lang.String ora, java.lang.String tipo) {
+        this.nomeEvento = nomeEvento;
         this.id_evento = id_evento;
         this.posti_disponibili = posti_disponibili;
         this.data_evento = data_evento;
@@ -16,6 +18,8 @@ public class Evento {
         this.ora = ora;
         this.tipo = tipo;
     }
+
+    public Evento(){}
 
     public int getId_evento() {
         return id_evento;
@@ -63,6 +67,14 @@ public class Evento {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public void setNomeEvento(String nomeEvento) {
+        this.nomeEvento = nomeEvento;
+    }
+
+    public String getNomeEvento() {
+        return nomeEvento;
     }
 }
 
