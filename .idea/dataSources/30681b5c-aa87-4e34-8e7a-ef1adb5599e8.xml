@@ -2,97 +2,9 @@
 <dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.49">
     <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||root|localhost|ALTER|G
-|root||root|localhost|ALTER ROUTINE|G
-|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
-|root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
-|root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
-|root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
-|root||root|localhost|AUDIT_ABORT_EXEMPT|G
-|root||root|localhost|AUDIT_ADMIN|G
-|root||mysql.session|localhost|AUTHENTICATION_POLICY_ADMIN|G
-|root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
-|root||mysql.session|localhost|BACKUP_ADMIN|G
-|root||root|localhost|BACKUP_ADMIN|G
-|root||root|localhost|BINLOG_ADMIN|G
-|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
-|root||mysql.session|localhost|CLONE_ADMIN|G
-|root||root|localhost|CLONE_ADMIN|G
-|root||mysql.session|localhost|CONNECTION_ADMIN|G
-|root||root|localhost|CONNECTION_ADMIN|G
-|root||root|localhost|CREATE|G
-|root||root|localhost|CREATE ROLE|G
-|root||root|localhost|CREATE ROUTINE|G
-|root||root|localhost|CREATE TABLESPACE|G
-|root||root|localhost|CREATE TEMPORARY TABLES|G
-|root||root|localhost|CREATE USER|G
-|root||root|localhost|CREATE VIEW|G
-|root||root|localhost|DELETE|G
-|root||root|localhost|DROP|G
-|root||root|localhost|DROP ROLE|G
-|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
-|root||root|localhost|EVENT|G
-|root||root|localhost|EXECUTE|G
-|root||root|localhost|FILE|G
-|root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
-|root||mysql.session|localhost|FIREWALL_EXEMPT|G
-|root||mysql.sys|localhost|FIREWALL_EXEMPT|G
-|root||root|localhost|FIREWALL_EXEMPT|G
-|root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
-|root||root|localhost|FLUSH_STATUS|G
-|root||root|localhost|FLUSH_TABLES|G
-|root||root|localhost|FLUSH_USER_RESOURCES|G
-|root||root|localhost|GROUP_REPLICATION_ADMIN|G
-|root||root|localhost|GROUP_REPLICATION_STREAM|G
-|root||root|localhost|INDEX|G
-|root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
-|root||root|localhost|INNODB_REDO_LOG_ENABLE|G
-|root||root|localhost|INSERT|G
-|root||root|localhost|LOCK TABLES|G
-|root||root|localhost|PASSWORDLESS_USER_ADMIN|G
-|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
-|root||root|localhost|PROCESS|G
-|root||root|localhost|REFERENCES|G
-|root||root|localhost|RELOAD|G
-|root||root|localhost|REPLICATION CLIENT|G
-|root||root|localhost|REPLICATION SLAVE|G
-|root||root|localhost|REPLICATION_APPLIER|G
-|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
-|root||root|localhost|RESOURCE_GROUP_ADMIN|G
-|root||root|localhost|RESOURCE_GROUP_USER|G
-|root||root|localhost|ROLE_ADMIN|G
-|root||mysql.infoschema|localhost|SELECT|G
-|root||root|localhost|SELECT|G
-|root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
-|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
-|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
-|root||root|localhost|SESSION_VARIABLES_ADMIN|G
-|root||root|localhost|SET_USER_ID|G
-|root||root|localhost|SHOW DATABASES|G
-|root||root|localhost|SHOW VIEW|G
-|root||root|localhost|SHOW_ROUTINE|G
-|root||mysql.session|localhost|SHUTDOWN|G
-|root||root|localhost|SHUTDOWN|G
-|root||mysql.session|localhost|SUPER|G
-|root||root|localhost|SUPER|G
-|root||mysql.infoschema|localhost|SYSTEM_USER|G
-|root||mysql.session|localhost|SYSTEM_USER|G
-|root||mysql.sys|localhost|SYSTEM_USER|G
-|root||root|localhost|SYSTEM_USER|G
-|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
-|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
-|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
-|root||root|localhost|TRIGGER|G
-|root||root|localhost|UPDATE|G
-|root||root|localhost|XA_RECOVER_ADMIN|G
-|root||root|localhost|grant option|G
-performance_schema|schema||mysql.session|localhost|SELECT|G
-sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>8.0.31</ServerVersion>
+      <ServerVersion>8.0.36</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1010,6 +922,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="ticket4you">
+      <IntrospectionTimestamp>2024-02-09.19:17:30</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-02-09.17:17:30</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="294" parent="1" name="mysql.infoschema">
@@ -4311,431 +4225,452 @@ ID_titolo</ColNames>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="1135" parent="378" name="PRIMARY">
+    <column id="1135" parent="378" name="email">
+      <DasType>varchar(200)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="1136" parent="378" name="password">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="1137" parent="378" name="PRIMARY">
       <ColNames>ID_am</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1136" parent="378" name="PRIMARY">
+    <key id="1138" parent="378" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1137" parent="379" name="ID_titolo">
+    <column id="1139" parent="379" name="ID_titolo">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1138" parent="379" name="ID_pagamento">
+    <column id="1140" parent="379" name="ID_pagamento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="1139" parent="379" name="appartenere_ibfk_1">
+    <foreign-key id="1141" parent="379" name="appartenere_ibfk_1">
       <ColNames>ID_titolo</ColNames>
       <RefColNames>ID_titolo</RefColNames>
       <RefTableName>titolo</RefTableName>
     </foreign-key>
-    <foreign-key id="1140" parent="379" name="appartenere_ibfk_2">
+    <foreign-key id="1142" parent="379" name="appartenere_ibfk_2">
       <ColNames>ID_pagamento</ColNames>
       <RefColNames>ID_pagamento</RefColNames>
       <RefTableName>pagamento</RefTableName>
     </foreign-key>
-    <index id="1141" parent="379" name="PRIMARY">
+    <index id="1143" parent="379" name="PRIMARY">
       <ColNames>ID_titolo
 ID_pagamento</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1142" parent="379" name="ID_pagamento">
+    <index id="1144" parent="379" name="ID_pagamento">
       <ColNames>ID_pagamento</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1143" parent="379" name="PRIMARY">
+    <key id="1145" parent="379" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1144" parent="380" name="ID_calendario">
+    <column id="1146" parent="380" name="ID_calendario">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1145" parent="380" name="ID_evento">
+    <column id="1147" parent="380" name="ID_evento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1146" parent="380" name="data_calendario">
+    <column id="1148" parent="380" name="data_calendario">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="1147" parent="380" name="calendario_ibfk_1">
+    <foreign-key id="1149" parent="380" name="calendario_ibfk_1">
       <ColNames>ID_evento</ColNames>
       <RefColNames>ID_evento</RefColNames>
       <RefTableName>evento</RefTableName>
     </foreign-key>
-    <index id="1148" parent="380" name="PRIMARY">
+    <index id="1150" parent="380" name="PRIMARY">
       <ColNames>ID_calendario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1149" parent="380" name="ID_evento">
+    <index id="1151" parent="380" name="ID_evento">
       <ColNames>ID_evento</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1150" parent="380" name="PRIMARY">
+    <key id="1152" parent="380" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1151" parent="381" name="ID_utente">
+    <column id="1153" parent="381" name="ID_utente">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1152" parent="381" name="ID_evento">
+    <column id="1154" parent="381" name="ID_evento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="1153" parent="381" name="cercare_ibfk_1">
+    <foreign-key id="1155" parent="381" name="cercare_ibfk_1">
       <ColNames>ID_utente</ColNames>
       <RefColNames>ID_utente</RefColNames>
       <RefTableName>utente</RefTableName>
     </foreign-key>
-    <foreign-key id="1154" parent="381" name="cercare_ibfk_2">
+    <foreign-key id="1156" parent="381" name="cercare_ibfk_2">
       <ColNames>ID_evento</ColNames>
       <RefColNames>ID_evento</RefColNames>
       <RefTableName>evento</RefTableName>
     </foreign-key>
-    <index id="1155" parent="381" name="PRIMARY">
+    <index id="1157" parent="381" name="PRIMARY">
       <ColNames>ID_utente
 ID_evento</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1156" parent="381" name="ID_evento">
+    <index id="1158" parent="381" name="ID_evento">
       <ColNames>ID_evento</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1157" parent="381" name="PRIMARY">
+    <key id="1159" parent="381" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1158" parent="382" name="ID_utente">
+    <column id="1160" parent="382" name="ID_utente">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1159" parent="382" name="ID_pagamento">
+    <column id="1161" parent="382" name="ID_pagamento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="1160" parent="382" name="effettuare_ibfk_1">
+    <foreign-key id="1162" parent="382" name="effettuare_ibfk_1">
       <ColNames>ID_utente</ColNames>
       <RefColNames>ID_utente</RefColNames>
       <RefTableName>utente</RefTableName>
     </foreign-key>
-    <foreign-key id="1161" parent="382" name="effettuare_ibfk_2">
+    <foreign-key id="1163" parent="382" name="effettuare_ibfk_2">
       <ColNames>ID_pagamento</ColNames>
       <RefColNames>ID_pagamento</RefColNames>
       <RefTableName>pagamento</RefTableName>
     </foreign-key>
-    <index id="1162" parent="382" name="PRIMARY">
+    <index id="1164" parent="382" name="PRIMARY">
       <ColNames>ID_utente
 ID_pagamento</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1163" parent="382" name="ID_pagamento">
+    <index id="1165" parent="382" name="ID_pagamento">
       <ColNames>ID_pagamento</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1164" parent="382" name="PRIMARY">
+    <key id="1166" parent="382" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1165" parent="383" name="ID_evento">
+    <column id="1167" parent="383" name="ID_evento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1166" parent="383" name="nome_evento">
+    <column id="1168" parent="383" name="nome_evento">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1167" parent="383" name="posti_disponibili">
+    <column id="1169" parent="383" name="posti_disponibili">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1168" parent="383" name="data">
+    <column id="1170" parent="383" name="data">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="1169" parent="383" name="luogo">
+    <column id="1171" parent="383" name="luogo">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="1170" parent="383" name="ora">
+    <column id="1172" parent="383" name="ora">
       <DasType>time|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="1171" parent="383" name="tipo">
+    <column id="1173" parent="383" name="tipo">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <index id="1172" parent="383" name="PRIMARY">
+    <column id="1174" parent="383" name="prezzo">
+      <DasType>varchar(45)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <index id="1175" parent="383" name="PRIMARY">
       <ColNames>ID_evento</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1173" parent="383" name="PRIMARY">
+    <key id="1176" parent="383" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1174" parent="384" name="ID_or">
+    <column id="1177" parent="384" name="ID_or">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1175" parent="384" name="eventi_organizzati">
+    <column id="1178" parent="384" name="eventi_organizzati">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1176" parent="384" name="piva">
+    <column id="1179" parent="384" name="piva">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1177" parent="384" name="indirizzo_or">
+    <column id="1180" parent="384" name="indirizzo_or">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="1178" parent="384" name="numero_telefono_or">
+    <column id="1181" parent="384" name="numero_telefono_or">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="1179" parent="384" name="PRIMARY">
+    <index id="1182" parent="384" name="PRIMARY">
       <ColNames>ID_or</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1180" parent="384" name="PRIMARY">
+    <key id="1183" parent="384" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1181" parent="385" name="ID_pagamento">
+    <column id="1184" parent="385" name="ID_pagamento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1182" parent="385" name="tipo_pagamento">
+    <column id="1185" parent="385" name="tipo_pagamento">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1183" parent="385" name="somma">
+    <column id="1186" parent="385" name="somma">
       <DasType>float|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1184" parent="385" name="stato_pagamento">
+    <column id="1187" parent="385" name="stato_pagamento">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="1185" parent="385" name="PRIMARY">
+    <index id="1188" parent="385" name="PRIMARY">
       <ColNames>ID_pagamento</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1186" parent="385" name="PRIMARY">
+    <key id="1189" parent="385" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1187" parent="386" name="ID_evento">
+    <column id="1190" parent="386" name="ID_evento">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1188" parent="386" name="ID_calendario">
+    <column id="1191" parent="386" name="ID_calendario">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="1189" parent="386" name="possedere_ibfk_1">
+    <foreign-key id="1192" parent="386" name="possedere_ibfk_1">
       <ColNames>ID_evento</ColNames>
       <RefColNames>ID_evento</RefColNames>
       <RefTableName>evento</RefTableName>
     </foreign-key>
-    <foreign-key id="1190" parent="386" name="possedere_ibfk_2">
+    <foreign-key id="1193" parent="386" name="possedere_ibfk_2">
       <ColNames>ID_calendario</ColNames>
       <RefColNames>ID_calendario</RefColNames>
       <RefTableName>calendario</RefTableName>
     </foreign-key>
-    <index id="1191" parent="386" name="PRIMARY">
+    <index id="1194" parent="386" name="PRIMARY">
       <ColNames>ID_evento
 ID_calendario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1192" parent="386" name="ID_calendario">
+    <index id="1195" parent="386" name="ID_calendario">
       <ColNames>ID_calendario</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1193" parent="386" name="PRIMARY">
+    <key id="1196" parent="386" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1194" parent="387" name="ID_titolo">
+    <column id="1197" parent="387" name="ID_titolo">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1195" parent="387" name="prezzo">
+    <column id="1198" parent="387" name="prezzo_t">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1196" parent="387" name="nome_t">
+    <column id="1199" parent="387" name="nome">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1197" parent="387" name="cognome_t">
+    <column id="1200" parent="387" name="cognome">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="1198" parent="387" name="posto_prenotato">
+    <column id="1201" parent="387" name="posto_prenotato">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="1199" parent="387" name="PRIMARY">
+    <index id="1202" parent="387" name="PRIMARY">
       <ColNames>ID_titolo</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1200" parent="387" name="PRIMARY">
+    <key id="1203" parent="387" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1201" parent="388" name="ID_utente">
+    <column id="1204" parent="388" name="ID_utente">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1202" parent="388" name="nome">
+    <column id="1205" parent="388" name="nome">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1203" parent="388" name="cognome">
+    <column id="1206" parent="388" name="cognome">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1204" parent="388" name="email">
+    <column id="1207" parent="388" name="email">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="1205" parent="388" name="password">
+    <column id="1208" parent="388" name="password">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="1206" parent="388" name="PRIMARY">
+    <column id="1209" parent="388" name="admin">
+      <DasType>tinyint(1)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="1210" parent="388" name="org">
+      <DasType>tinyint(1)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <index id="1211" parent="388" name="PRIMARY">
       <ColNames>ID_utente</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1207" parent="388" name="PRIMARY">
+    <key id="1212" parent="388" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1208" parent="389" name="ID_utente_r">
+    <column id="1213" parent="389" name="ID_utente_r">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1209" parent="389" name="data_nascita">
+    <column id="1214" parent="389" name="data_nascita">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1210" parent="389" name="indirizzo_utr">
+    <column id="1215" parent="389" name="indirizzo_utr">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1211" parent="389" name="numero_telefono_utr">
+    <column id="1216" parent="389" name="numero_telefono_utr">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="1212" parent="389" name="PRIMARY">
+    <index id="1217" parent="389" name="PRIMARY">
       <ColNames>ID_utente_r</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="1213" parent="389" name="PRIMARY">
+    <key id="1218" parent="389" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="1214" parent="390" name="ID_utente">
+    <column id="1219" parent="390" name="ID_utente">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1215" parent="390" name="ID_calendario">
+    <column id="1220" parent="390" name="ID_calendario">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="1216" parent="390" name="vedere_ibfk_1">
+    <foreign-key id="1221" parent="390" name="vedere_ibfk_1">
       <ColNames>ID_utente</ColNames>
       <RefColNames>ID_utente</RefColNames>
       <RefTableName>utente</RefTableName>
     </foreign-key>
-    <foreign-key id="1217" parent="390" name="vedere_ibfk_2">
+    <foreign-key id="1222" parent="390" name="vedere_ibfk_2">
       <ColNames>ID_calendario</ColNames>
       <RefColNames>ID_calendario</RefColNames>
       <RefTableName>calendario</RefTableName>
     </foreign-key>
-    <index id="1218" parent="390" name="PRIMARY">
+    <index id="1223" parent="390" name="PRIMARY">
       <ColNames>ID_utente
 ID_calendario</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1219" parent="390" name="ID_calendario">
+    <index id="1224" parent="390" name="ID_calendario">
       <ColNames>ID_calendario</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1220" parent="390" name="PRIMARY">
+    <key id="1225" parent="390" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

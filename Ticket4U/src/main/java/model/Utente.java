@@ -16,6 +16,13 @@ public class Utente {
 
     public Utente(){}
 
+    public boolean isOrg() {
+        return isOrg;
+    }
+
+    public void setOrg(boolean org) {
+        isOrg = org;
+    }
 
     public int getId_utente() {
         return id_utente;
