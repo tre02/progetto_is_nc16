@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Evento;
 import model.EventoDAO;
+import model.Organizzatore;
+import model.OrganizzatoreDAO;
 
 import java.io.IOException;
 
@@ -31,6 +33,12 @@ public class AggiuntaEventoServlet extends HttpServlet {
         p.setOra(request.getParameter("ora"));
         p.setTipo(request.getParameter("tipo"));
         if(dao.doRetrieveById(Integer.parseInt(request.getParameter("ID_evento")))!=null) {
+            if(request.getSession().getAttribute("organizzatore")!= null){
+                Organizzatore temp = (Organizzatore) request.getSession().getAttribute("organizzatore");
+                OrganizzatoreDAO daoOrg = new OrganizzatoreDAO();
+                temp.setEventi_organizzati(temp.getEventi_organizzati()+1);
+                daoOrg.doUpdate(temp);
+            }
             dao.doSave(p);
         }else{
             response.sendRedirect(request.getContextPath() + "webapp/error.jsp");

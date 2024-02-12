@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import model.EventoDAO;
 import model.Evento;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet (value="/ricerca")
@@ -16,7 +18,12 @@ public class RicercaServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String ricerca = "%" + request.getParameter("ricerca") + "%";
         EventoDAO eventoDAO = new EventoDAO();
-        List<Evento> risultatoRicerca = eventoDAO.doRetriveByRicerca(ricerca);
+        List<Evento> risultatoRicerca;
+        try {
+            risultatoRicerca = eventoDAO.doRetriveByRicerca(ricerca);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         request.setAttribute("ricerca",risultatoRicerca);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/results/ricerca.jsp");
         dispatcher.forward(request,response);

@@ -1,18 +1,10 @@
 package model;
 public class Amministratore extends Utente{
-    private int id_am;
     private String orario_inizio_sessione;
     private String orario_fine_sessione;
     private String numero_telefono_am;
 
     public Amministratore(){super();}
-    public int getId_am() { return id_am; }
-
-
-    public void setId_am(int id_am) {
-        this.id_am = id_am;
-    }
-
     public String getOrario_inizio_sessione() {
         return orario_inizio_sessione;
     }

@@ -28,7 +28,7 @@
                     <c:forEach items="${ricerca}" var="evento">
                         <div class="bordo">
                             <a href="http://localhost:8080/progetto_is_nc16/visualizza?id=${evento.id_evento}" style="text-decoration: none">
-                                <div class="prodotto">
+                                <div class="evento">
 
                                     <img src="img/${evento.luogo}${evento.id_evento}.jpg"><br>
                                 </div>
