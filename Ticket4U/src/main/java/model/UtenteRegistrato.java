@@ -1,21 +1,11 @@
 package model;
 
 public class UtenteRegistrato extends Utente{
-    private int id_utr;
     private String data_nascita;
     private String indirizzo_utr;
     private String numero_telefono_utr;
 
     public UtenteRegistrato(){}
-    public int getId_utr() {
-        return id_utr;
-    }
-
-    public void setId_utr(int id_utr) {
-        this.id_utr = id_utr;
-    }
-
-
     public String getData_nascita() {
         return data_nascita;
     }
