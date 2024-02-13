@@ -1,5 +1,6 @@
 
 <%@ page import="model.Evento" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,7 @@
     <main>
         <!-- Il contenuto della pagina va qui -->
         <%
-            List<boolean> esisteEvento = (List<boolean>) request.getAttribute("esiste");
+            List<Boolean> esisteEvento = (List<Boolean>) request.getAttribute("esiste");
            Evento ordine = (Evento) request.getAttribute("evento");
             List<Integer> idevento = ordine.getId_evento();
             List<String> nome = ordine.getNomeEvento();

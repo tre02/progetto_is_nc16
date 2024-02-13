@@ -57,8 +57,8 @@
                 <input type="email" placeholder="prova@esempio.it" name="email" id="email" required><br>
                 <label for="password">Inserisci la password</label><br>
                 <input type="password" placeholder="Esempio2!" name="password" id="password" required ><br>
-
-
+                <!--Disclaimer: senza compilare il sotto non puoi comprare-->
+                <!--Form coi dati per creare utente registrato-->
             </th>
 
         </tr>
