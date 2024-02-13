@@ -35,6 +35,7 @@ public class RegistrazioneServlet extends HttpServlet {
             utente.setEmail(email);
             utente.setPassword(password);
             utente.setAdmin(false);
+            utente.setOrg(false);
             utenteRegistrato.setData_nascita(data_nascita);
             utenteRegistrato.setIndirizzo_utr(indirizzo_utr);
             utenteRegistrato.setNumero_telefono_utr(numero_telefono_utr);
@@ -55,7 +56,7 @@ public class RegistrazioneServlet extends HttpServlet {
             utente.setEmail(email);
             utente.setPassword(password);
             utente.setAdmin(false);
-
+            utente.setOrg(false);
             //salvo l'utente nel database
             utenteDAO.doSave(utente);
             response.sendRedirect("http://localhost:8080/progetto_is_nc16/account.jsp"); //una volta salvato nel database lo reindirizzo alla pagina di login
