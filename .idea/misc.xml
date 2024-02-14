@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Progetto_is_nc16/pom.xml" />
+    <file type="web" url="file://$PROJECT_DIR$/Ticket4U" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,5 +12,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/../../../../Tomcat/apache-tomcat-10.1.18/webapps" />
+  </component>
 </project>

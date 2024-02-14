@@ -4,7 +4,7 @@
         <option name="autoReloadType" value="SELECTIVE" />
     </component>
     <component name="ChangeListManager">
-        <<<<<<< HEAD
+       < HEAD
         <list default="true" id="b8bbcf69-2c41-485f-a08c-944cc9fffdf8" name="Changes" comment="servlet EventoInformationServlet.java">
         <changelist_data name="Tre02" email="tresy.sorrentino02@gmail.com" />
         <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />

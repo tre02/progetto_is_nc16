@@ -10,7 +10,7 @@
     <a href="index.jsp"><img src="logo.png" alt="Logo T4Y"></a>
     <button onclick="window.location.href='eventi.jsp'">Eventi</button>
     <button onclick="window.location.href='località.jsp'">Eventi</button>
-    <form action="ricerca.jsp" method="get">
+    <form action="WEB-INF/ricerca.jsp" method="get">
         <input type="text" name="query" placeholder="Cerca...">
         <button type="submit" class="search-button"></button>
     </form>
@@ -42,7 +42,7 @@
         <p>Supporto Telefonico: 801 4574</p>
     </div>
 </div>
-<script src="js/script.js"></script>
-<script src="js/script.js"></script>
+<script src="WEB-INF/WEB-INF/js/script.js"></script>
+<script src="WEB-INF/WEB-INF/js/script.js"></script>
 </body>
 </html>

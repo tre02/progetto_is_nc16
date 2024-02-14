@@ -42,7 +42,7 @@
         <p>Supporto Telefonico: 801 4574</p>
     </div>
 </div>
-<script src="script.js"></script>
-<script src="script.js"></script>
+<script src="../../js/script.js"></script>
+<script src="../../js/script.js"></script>
 </body>
 </html>

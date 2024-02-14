@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <section id="header">
-    <a href="http://localhost:8080/progetto_is_nc16/"><img src="immagini/logoT4Y.png" class="logo"></a>
+    <a href="http://localhost:8080/progetto_is_nc16/"><img src="../../immagini/logoT4Y.png" class="logo"></a>
     <div class="search-bar">
         <form method="post" action="ricerca" autocomplete="off">
             <input type="text" name="ricerca" placeholder="Cerca...">
