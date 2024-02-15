@@ -130,13 +130,15 @@ public class UtenteDAO {
             throw new RuntimeException(e);
         }
     }
-    public void doDelete(Utente utente) {
+    public Boolean doDelete(Utente utente) {
         try {
             Connection connection = ConPool.getConnection();
             PreparedStatement st = connection.prepareStatement("DELETE FROM ticket4you.utente WHERE ID_utente = " + utente.getId_utente() + ";");
             st.executeUpdate();
         } catch(Exception e) {
             System.out.println(e);
+            return false;
         }
+        return true;
     }
 }

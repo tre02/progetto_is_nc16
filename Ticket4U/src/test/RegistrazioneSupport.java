@@ -69,7 +69,7 @@ public class RegistrazioneSupport {
 
     public boolean validateSignup(String name, String surname, String username, String ddn, String email) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxUsername(username) && validateDate(username) && validateSyntaxEmail(email);
+                && validateSyntaxUsername(username) && validateDate(ddn) && validateSyntaxEmail(email);
     }
 
     public boolean validateSignup(String name, String surname, String username, String ddn, String email, String password) {

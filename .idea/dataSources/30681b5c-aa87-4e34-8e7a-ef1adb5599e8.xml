@@ -1003,15 +1003,15 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="290" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="ticket4you">
-      <IntrospectionTimestamp>2024-02-14.20:06:49</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-02-14.18:06:49</LocalIntrospectionTimestamp>
+    <schema id="291" parent="1" name="sakila">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="sakila">
+    <schema id="293" parent="1" name="ticket4you">
+      <IntrospectionTimestamp>2024-02-16.00:01:39</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-02-15.22:01:39</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="294" parent="1" name="world">
@@ -1035,55 +1035,55 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="298" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="299" parent="291" name="acquistare">
+    <table id="299" parent="293" name="acquistare">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="300" parent="291" name="amministratore">
+    <table id="300" parent="293" name="amministratore">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="301" parent="291" name="appartenere">
+    <table id="301" parent="293" name="appartenere">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="302" parent="291" name="calendario">
+    <table id="302" parent="293" name="calendario">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="303" parent="291" name="cercare">
+    <table id="303" parent="293" name="cercare">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="304" parent="291" name="effettuare">
+    <table id="304" parent="293" name="effettuare">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="305" parent="291" name="evento">
+    <table id="305" parent="293" name="evento">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="306" parent="291" name="organizzatore">
+    <table id="306" parent="293" name="organizzatore">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="307" parent="291" name="pagamento">
+    <table id="307" parent="293" name="pagamento">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="308" parent="291" name="possedere">
+    <table id="308" parent="293" name="possedere">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="309" parent="291" name="titolo">
+    <table id="309" parent="293" name="titolo">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="310" parent="291" name="utente">
+    <table id="310" parent="293" name="utente">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="311" parent="291" name="utente_registrato">
+    <table id="311" parent="293" name="utente_registrato">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>

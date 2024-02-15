@@ -33,7 +33,7 @@ public class OrganizzatoreDAO {
     public List<Organizzatore> doRetrieveAll(){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =
-                    con.prepareStatement("SELECT id_or, piva, indirizzo_or, eventi_organizzati, numero_telefono_or FROM organizzatore");
+                    con.prepareStatement("SELECT ID_utente, piva, indirizzo_or, eventi_organizzati, numero_telefono_or FROM organizzatore");
             ResultSet rs = ps.executeQuery();
             List<Organizzatore> organizzatori = new ArrayList<>();
             while(rs.next()){
@@ -54,7 +54,7 @@ public class OrganizzatoreDAO {
     public Organizzatore doRetrieveById(int id){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =
-                    con.prepareStatement("SELECT id_or, piva, indirizzo_or, eventi_organizzati, numero_telefono_or FROM organizzatore WHERE id_or=?");
+                    con.prepareStatement("SELECT ID_utente, piva, indirizzo_or, eventi_organizzati, numero_telefono_or FROM organizzatore WHERE ID_utente=?");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
@@ -83,28 +83,6 @@ public class OrganizzatoreDAO {
             ps.setString(4, organizzatore.getNumero_telefono_or());
             ps.setInt(5, organizzatore.getId_or());
             ps.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public Organizzatore doRetrieveByEmail(String email){
-        try (Connection con = ConPool.getConnection()) {
-            PreparedStatement ps =
-                    con.prepareStatement("SELECT id_or, piva, indirizzo_or, eventi_organizzati, numero_telefono_or FROM organizzatore WHERE email = ?");
-            ps.setString(1, email);
-            ResultSet rs = ps.executeQuery();
-            if(rs.next()) {
-                Organizzatore organizzatore = new Organizzatore();
-                organizzatore.setId_or(rs.getInt(1));
-                organizzatore.setPiva(rs.getString(2));
-                organizzatore.setIndirizzo_or(rs.getString(3));
-                organizzatore.setEventi_organizzati(rs.getString(4));
-                organizzatore.setNumero_telefono_or(rs.getString(5));
-                return organizzatore;
-            } else {
-                return null;
-            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
