@@ -64,7 +64,7 @@ public class RegistrazioneSupport {
 
     public boolean validateSignup(String name, String surname, String username, String ddn) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxUsername(username) && validateDate(username);
+                && validateSyntaxUsername(username) && validateDate(ddn);
     }
 
     public boolean validateSignup(String name, String surname, String username, String ddn, String email) {
@@ -81,6 +81,6 @@ public class RegistrazioneSupport {
     public boolean validateSignup(String name, String surname, String username, String ddn, String email, String password, String telefono) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
                 && validateSyntaxUsername(username) && validateDate(ddn) && validateSyntaxEmail(email)
-                && validateLenghtPassword(password) && validateTelephone(password);
+                && validateLenghtPassword(password) && validateTelephone(telefono);
     }
 }

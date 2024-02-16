@@ -8,11 +8,9 @@ import model.EventoDAO;
 import model.Evento;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Serial;
 
 @WebServlet("/notificaservlet")
 public class NotificaServlet extends HttpServlet {
-    @Serial
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
