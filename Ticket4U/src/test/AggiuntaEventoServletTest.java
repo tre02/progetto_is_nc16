@@ -21,8 +21,8 @@ public class AggiuntaEventoServletTest {
     void AggiuntaEventoTestNomeEvento1() {
         String inputName = "Kendrick Lamar - Mr. Morale Tour";
 
-        Mockito.when(aggiuntaEventoSupport.validateEvento(inputName)).thenReturn(false);
-        assertFalse(aggiuntaEventoSupport.validateEvento(inputName));
+        Mockito.when(aggiuntaEventoSupport.validateEvento(inputName)).thenReturn(true);
+        assertTrue(aggiuntaEventoSupport.validateEvento(inputName));
     }
     @Test
     void AggiuntaEventoTestNomeEvento2() {

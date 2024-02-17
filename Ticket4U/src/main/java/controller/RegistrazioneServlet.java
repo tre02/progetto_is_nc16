@@ -13,7 +13,6 @@ import java.io.IOException;
 
 @WebServlet(value = "/Registrazione")
 
-//questa servlet serve per registrare il nuovo utente nel database
 public class RegistrazioneServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //prendo prima tutti i parametri del form
@@ -47,8 +46,6 @@ public class RegistrazioneServlet extends HttpServlet {
         if(nome.isEmpty()|| cognome.isEmpty()||email.isEmpty() || password.isEmpty()){
             response.sendRedirect("http://localhost:8080/progetto_is_nc16/registrazione.html?errore=1");
         }else {
-
-            //creo l'utente con i parametri
             UtenteDAO utenteDAO = new UtenteDAO();
             Utente utente = new Utente();
             utente.setNome(nome);
@@ -57,7 +54,6 @@ public class RegistrazioneServlet extends HttpServlet {
             utente.setPassword(password);
             utente.setAdmin(false);
             utente.setOrg(false);
-            //salvo l'utente nel database
             utenteDAO.doSave(utente);
             response.sendRedirect("http://localhost:8080/progetto_is_nc16/account.jsp"); //una volta salvato nel database lo reindirizzo alla pagina di login
         }

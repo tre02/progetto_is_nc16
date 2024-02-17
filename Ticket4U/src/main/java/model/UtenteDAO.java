@@ -130,15 +130,23 @@ public class UtenteDAO {
             throw new RuntimeException(e);
         }
     }
-    public Boolean doDelete(Utente utente) {
+    public Boolean doDelete(String email, String password) {
         try {
             Connection connection = ConPool.getConnection();
-            PreparedStatement st = connection.prepareStatement("DELETE FROM ticket4you.utente WHERE ID_utente = " + utente.getId_utente() + ";");
-            st.executeUpdate();
-        } catch(Exception e) {
-            System.out.println(e);
+            String query = "DELETE FROM ticket4you.utente WHERE email = ? AND password = ?";
+            PreparedStatement st = connection.prepareStatement(query);
+            st.setString(1, email);
+            st.setString(2, password);
+            int rowsAffected = st.executeUpdate();
+
+            if (rowsAffected == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch(SQLException e) {
+            System.out.println("Errore durante l'eliminazione dell'utente: " + e.getMessage());
             return false;
         }
-        return true;
     }
 }

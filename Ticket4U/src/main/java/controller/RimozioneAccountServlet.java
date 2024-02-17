@@ -14,7 +14,7 @@ public class RimozioneAccountServlet {
         Utente usr = (Utente) request.getSession().getAttribute("utente");
         UtenteDAO daoUtente = new UtenteDAO();
         if(!request.getParameter("password").isEmpty() && request.getParameter("password").equals(usr.getPassword())){
-            daoUtente.doDelete(usr);
+            daoUtente.doDelete(usr.getEmail(), usr.getPassword());
             request.getSession().invalidate();
             response.sendRedirect("account.jsp");
         }
