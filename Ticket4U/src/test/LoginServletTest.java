@@ -16,23 +16,23 @@ public class LoginServletTest {
 
     @Test
     public void LoginServletTest1(){
-        String email = "n.sorà@libero";
-        String password = "nsora1001";
-        Mockito.when(login.validateLogin(email, password)).thenReturn(true);
-        assertTrue(login.validateLogin(email, password));
+        String email = "s.vigorito@virgilio";
+        String password = "Marefuori01";
+        Mockito.when(login.validateLogin(email, password)).thenReturn(false);
+        assertFalse(login.validateLogin(email, password));
     }
     @Test
     public void LoginServletTest2(){
-        String email = "n.sorà@libero.it";
-        String password = "nso";
+        String email = "s.vigorito@virgilio.it";
+        String password = "Mf1";
         Mockito.when(login.validateLogin(email, password)).thenReturn(false);
         assertFalse(login.validateLogin(email, password));
     }
 
     @Test
     public void LoginServletTest3(){
-        String email = "n.sorà@libero.it";
-        String password = "nsora1001";
+        String email = "s.vigorito@virgilio.it";
+        String password = "Marefuori01";
         Mockito.when(login.validateLogin(email, password)).thenReturn(true);
         assertTrue(login.validateLogin(email, password));
     }

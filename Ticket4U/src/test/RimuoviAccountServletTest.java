@@ -8,16 +8,16 @@ public class RimuoviAccountServletTest {
 
     @Test
     public void testRimozioneAccount1(){
-        String email = "n.sora@libero.it";
-        String password = "nsroa1005";
+        String email = "l.greco@gmail.com";
+        String password = "mf1";
         UtenteDAO testDao = new UtenteDAO();
         Boolean result = testDao.doDelete(email, password);
         assertFalse(result);
     }
     @Test
     public void testRimozioneAccount2(){
-        String email = "n.sora@libero.it";
-        String password = "nsora1001";
+        String email = "l.greco@gmail.com";
+        String password = "luca03";
         UtenteDAO testDao = new UtenteDAO();
         Boolean result = testDao.doDelete(email, password);
         assertTrue(result);

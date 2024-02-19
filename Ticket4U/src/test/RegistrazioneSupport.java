@@ -10,10 +10,6 @@ public class RegistrazioneSupport {
         return input.matches("^[a-zA-Z\\s]+$");
     }
 
-    public boolean validateSyntaxUsername (String username) {
-        return username.matches("^[^A-Za-z0-9]+$");
-    }
-
     public boolean validateDate (String date) {
         String[] array = date.split("/");
         int anno = Integer.parseInt(array[2]);
@@ -40,13 +36,6 @@ public class RegistrazioneSupport {
         return password.length() >= 6 && password.length() <= 20;
     }
 
-    public boolean validateTelephone(String telephone) {
-        if(telephone.matches("[0-9]+") == true) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     public boolean validateSignup(String name) {
         return validateSyntaxNameSurname(name);
@@ -55,31 +44,19 @@ public class RegistrazioneSupport {
     public boolean validateSignup(String name, String surname) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname);
     }
-
-    public boolean validateSignup(String name, String surname, String username) {
+    public boolean validateSignup(String name, String surname,String ddn) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxNameSurname(username);
+                && validateDate(ddn);
     }
 
-    public boolean validateSignup(String name, String surname, String username, String ddn) {
+    public boolean validateSignup(String name, String surname,String email, String password) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxUsername(username) && validateDate(ddn);
+                && validateSyntaxEmail(email) && validateLenghtPassword(password);
     }
 
-    public boolean validateSignup(String name, String surname, String username, String ddn, String email) {
+    public boolean validateSignup(String name, String surname, String ddn, String email, String password) {
         return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxUsername(username) && validateDate(ddn) && validateSyntaxEmail(email);
-    }
-
-    public boolean validateSignup(String name, String surname, String username, String ddn, String email, String password) {
-        return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxUsername(username) && validateDate(ddn) && validateSyntaxEmail(email)
+                && validateDate(ddn) && validateSyntaxEmail(email)
                 && validateLenghtPassword(password);
-    }
-
-    public boolean validateSignup(String name, String surname, String username, String ddn, String email, String password, String telefono) {
-        return validateSyntaxNameSurname(name) && validateSyntaxNameSurname(surname)
-                && validateSyntaxUsername(username) && validateDate(ddn) && validateSyntaxEmail(email)
-                && validateLenghtPassword(password) && validateTelephone(telefono);
     }
 }
