@@ -24,6 +24,14 @@ public class LoginServletTest {
     @Test
     public void LoginServletTest2(){
         String email = "n.sorà@libero.it";
+        String password = "nso";
+        Mockito.when(login.validateLogin(email, password)).thenReturn(false);
+        assertFalse(login.validateLogin(email, password));
+    }
+
+    @Test
+    public void LoginServletTest3(){
+        String email = "n.sorà@libero.it";
         String password = "nsora1005";
         Mockito.when(login.validateLogin(email, password)).thenReturn(false);
         assertFalse(login.validateLogin(email, password));

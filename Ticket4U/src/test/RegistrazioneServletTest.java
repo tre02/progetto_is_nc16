@@ -149,7 +149,7 @@ public class RegistrazioneServletTest {
         String inputDate = "09/06/2003";
         String inputEmail = "giacomo.verdi@gmail";
         String inputPassword = "Spk09!";
-        String inputTelefono = "8609870038?";
+        String inputTelefono = "8609870038";
 
         Mockito.when(signup.validateSignup(inputName, inputSurname, inputUsername, inputDate, inputEmail, inputPassword, inputTelefono)).thenReturn(true);
         assertTrue(signup.validateSignup(inputName, inputSurname, inputUsername, inputDate, inputEmail, inputPassword, inputTelefono));
