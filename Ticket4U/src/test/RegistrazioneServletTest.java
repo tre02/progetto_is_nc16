@@ -23,9 +23,8 @@ public class RegistrazioneServletTest {
     }
     @Test
     void SignupTestNameSurname2() {
-        String inputName = "Giacomo";
-        String inputSurname = "Verdi1";
-
+        String inputName = "Tresy";
+        String inputSurname = "Sorrent1no";
         Mockito.when(signup.validateSignup(inputName, inputSurname)).thenReturn(false);
         assertFalse(signup.validateSignup(inputName, inputSurname));
     }
@@ -33,22 +32,20 @@ public class RegistrazioneServletTest {
     void SignupTestEmail3() {
         String inputName = "Tresy";
         String inputSurname = "Sorrentino";
-        String inputDate = "09/06/2001";
         String inputEmail = "t.sorrentino@gmail";
 
-        Mockito.when(signup.validateSignup(inputName, inputSurname, inputDate, inputEmail)).thenReturn(false);
-        assertFalse(signup.validateSignup(inputName, inputSurname, inputDate, inputEmail));
+        Mockito.when(signup.validateSignup(inputName, inputSurname, inputEmail)).thenReturn(false);
+        assertFalse(signup.validateSignup(inputName, inputSurname, inputEmail));
     }
     @Test
     void SignupTestEmail4() {
         String inputName = "Tresy";
         String inputSurname = "Sorrentino";
-        String inputDate = "09/06/2001";
         String inputEmail = "t.sorrentino@gmail.com";
         String password = "Ag3";
 
-        Mockito.when(signup.validateSignup(inputName, inputSurname, inputDate, inputEmail, password)).thenReturn(false);
-        assertFalse(signup.validateSignup(inputName, inputSurname, inputDate, inputEmail, password));
+        Mockito.when(signup.validateSignup(inputName, inputSurname, inputEmail, password)).thenReturn(false);
+        assertFalse(signup.validateSignup(inputName, inputSurname, inputEmail, password));
     }
     @Test
     void SignupTestUsername5() {
