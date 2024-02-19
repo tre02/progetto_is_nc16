@@ -16,7 +16,7 @@ public class LoginServletTest {
 
     @Test
     public void LoginServletTest1(){
-        String email = "n.sorà@libero.it";
+        String email = "n.sorà@libero";
         String password = "nsora1001";
         Mockito.when(login.validateLogin(email, password)).thenReturn(true);
         assertTrue(login.validateLogin(email, password));
@@ -32,8 +32,8 @@ public class LoginServletTest {
     @Test
     public void LoginServletTest3(){
         String email = "n.sorà@libero.it";
-        String password = "nsora1005";
-        Mockito.when(login.validateLogin(email, password)).thenReturn(false);
-        assertFalse(login.validateLogin(email, password));
+        String password = "nsora1001";
+        Mockito.when(login.validateLogin(email, password)).thenReturn(true);
+        assertTrue(login.validateLogin(email, password));
     }
 }

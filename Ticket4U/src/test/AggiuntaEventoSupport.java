@@ -1,9 +1,13 @@
+import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AggiuntaEventoSupport {
     public AggiuntaEventoSupport(){}
     public boolean checkDataFormato(String data) {
+        if(LocalDate.parse(data).isBefore(LocalDate.now())){
+            return false;
+        }
         String regex = "^\\d{2}/\\d{2}/\\d{4}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(data);
@@ -11,7 +15,7 @@ public class AggiuntaEventoSupport {
     }
     public boolean checkLunghezzaNome(String nome) {
         int lunghezzaMinima = 8;
-        int lunghezzaMassima = 50;
+        int lunghezzaMassima = 20;
 
         int lunghezzaNome = nome.length();
         return lunghezzaNome >= lunghezzaMinima && lunghezzaNome <= lunghezzaMassima;
@@ -47,9 +51,12 @@ public class AggiuntaEventoSupport {
         return checkLunghezzaNome(nomeEvento) && checkDataFormato(data) && checkDataFormato(ora);
     }
     public boolean validateEvento(String nomeEvento, String data, String ora, String tipoEvento){
-        return checkLunghezzaNome(nomeEvento) && checkDataFormato(data) && checkDataFormato(ora) && checkTipoEvento(tipoEvento);
+        return checkLunghezzaNome(nomeEvento) && checkDataFormato(data) && checkFormatoOra(ora) && checkTipoEvento(tipoEvento);
     }
     public boolean validateEvento(String nomeEvento, String data, String ora, String tipoEvento, String numeroPosti){
-        return checkLunghezzaNome(nomeEvento) && checkDataFormato(data) && checkDataFormato(ora) && checkTipoEvento(tipoEvento) && checkNumeroPosti(numeroPosti);
+        return checkLunghezzaNome(nomeEvento) && checkDataFormato(data) && checkFormatoOra(ora) && checkTipoEvento(tipoEvento) && checkNumeroPosti(numeroPosti);
+    }
+    public boolean validateEvento(String nomeEvento, String data, String ora, String tipoEvento, String numeroPosti, String luogo){
+        return checkLunghezzaNome(nomeEvento) && checkDataFormato(data) && checkFormatoOra(ora) && checkTipoEvento(tipoEvento) && checkNumeroPosti(numeroPosti) && checkLuogo(luogo);
     }
 }
