@@ -6,7 +6,25 @@ import java.util.List;
 
 public class EventoDAO {
 
-    public EventoDAO(){}
+    private List<EventoDAOObserver> observers;
+
+    public EventoDAO() {
+        this.observers = new ArrayList<>();
+    }
+
+    public void addObserver(EventoDAOObserver observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(EventoDAOObserver observer) {
+        observers.remove(observer);
+    }
+
+    public void notifyObservers() {
+        for (EventoDAOObserver observer : observers) {
+            observer.updateEventList();
+        }
+    }
     public Evento doRetrieveById(int id){
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =
@@ -50,7 +68,7 @@ public class EventoDAO {
             rs.next();
             int id = rs.getInt(1);
             evento.setId_evento(id);
-
+            notifyObservers();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

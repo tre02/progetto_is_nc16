@@ -8,13 +8,13 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
     <title>Ticket4You</title>
-    <script src="js/codici.js"></script>
+    <script src="src/main/webapp/js/script.js"></script>
 
 </head>
 <body>
 <div class="content">
 
-    <jsp:include page="WEB-INF/navbar_footer/navbar.jsp" />
+    <jsp:include page="navbar.jsp" />
 
     <main>
         <c:choose> <%-- Questo if invece serve per vedere se l'utente ha fatto l'accesso. Se ha fatto l'accesso non mostro più form--%>
@@ -79,7 +79,7 @@
     <button onclick="scrollToTop()" id="scrollToTop"><i class="fa-solid fa-arrow-up fa-2xl"></i></button>
 </div>
 
-<jsp:include page="WEB-INF/navbar_footer/navbar.jsp" />
+<jsp:include page="footer.jsp" />
 </body>
 
 </html>
