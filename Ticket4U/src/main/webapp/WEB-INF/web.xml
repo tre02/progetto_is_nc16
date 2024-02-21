@@ -4,22 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <display-name>Nome_Della_Tua_App</display-name>
-
-    <!-- Mappatura delle servlets -->
-    <servlet>
-        <servlet-name>AggiuntaEventoServlet</servlet-name>
-        <servlet-class>controller.AggiuntaEventoServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AggiuntaEventoServlet</servlet-name>
-        <url-pattern>/aggiuntaEvento</url-pattern>
-    </servlet-mapping>
-
-
-    <!-- Aggiungi qui le altre servlets e le loro mappature -->
-
-    <!-- Mappatura delle pagine JSP -->
+    <display-name>Ticket4You</display-name>
     <servlet>
         <servlet-name>index</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
@@ -28,7 +13,14 @@
         <servlet-name>index</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>AggiuntaEventoServlet</servlet-name>
+        <servlet-class>controller.AggiuntaEventoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AggiuntaEventoServlet</servlet-name>
+        <url-pattern>/aggiuntaEvento</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>AggiuntaNuovoEvento</servlet-name>
         <jsp-file>/WEB-INF/AggiuntaNuovoEvento.jsp</jsp-file>
@@ -37,10 +29,52 @@
         <servlet-name>AggiuntaNuovoEvento</servlet-name>
         <url-pattern>/AggiuntaNuovoEvento.jsp</url-pattern>
     </servlet-mapping>
-
-    <!-- Aggiungi qui le altre pagine JSP e le loro mappature -->
-
-    <!-- Mappatura delle risorse statiche -->
-
-
+    <servlet>
+        <servlet-name>EventoInformationServlet</servlet-name>
+        <servlet-class>controller.EventoInformationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EventoInformationServlet</servlet-name>
+        <url-pattern>/eventoinformationservlet.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ModificaEventiServlet</servlet-name>
+        <servlet-class>controller.ModificaEventiServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModificaEventiServlet</servlet-name>
+        <url-pattern>/ModificaEventiServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegistrazioneServlet</servlet-name>
+        <servlet-class>controller.RegistrazioneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrazioneServlet</servlet-name>
+        <url-pattern>/Registrazione</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RicercaServlet</servlet-name>
+        <servlet-class>controller.RicercaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RicercaServlet</servlet-name>
+        <url-pattern>/ricerca</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RimozioneAccountServlet</servlet-name>
+        <servlet-class>controller.RimozioneAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RimozioneAccountServlet</servlet-name>
+        <url-pattern>/RimozioneAccount</url-pattern>
+    </servlet-mapping>
 </web-app>

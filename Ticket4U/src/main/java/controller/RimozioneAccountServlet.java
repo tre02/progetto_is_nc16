@@ -1,4 +1,5 @@
 package controller;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.UtenteDAO;
@@ -7,6 +8,7 @@ import model.UtenteRegistratoDAO;
 import model.UtenteRegistrato;
 
 import java.io.IOException;
+@WebServlet(value = "/RimozioneAccount")
 
 public class RimozioneAccountServlet {
 
