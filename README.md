@@ -7,9 +7,17 @@ tenuto dal Prof. Carmine Gravino presso l'Università degli studi di Salerno.
 Chi siamo
 ------------
 •Tresy Sorrentino
+
+
 •Simona Vigorito
+
+
 •Nicolò Sorà
+
+
 •Luca Greco
+
+
 
 Cos'è Ticket4You
 ------------
@@ -28,8 +36,14 @@ Ticket4You consente agli utenti di potersi registrare alla piattaforma e success
 
 
 •Visualizzare la scheda informativa di un evento
+
+
 •Ricercare eventi tramite inserimento di nome dell'evento e località
+
+
 •Acquistare biglietti
+
+
 •Scegliere posti disponibili dell'evento
 
 
