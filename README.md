@@ -50,7 +50,7 @@ Ticket4You consente agli utenti di potersi registrare alla piattaforma e success
 
 Replicare il lavoro
 ------------
-Per poter utilizzare la piattaforma Ticket4You, il primo passo da compiere è clonare la repository sul prorpio IDE ();
+Per poter utilizzare la piattaforma Ticket4You, il primo passo da compiere è clonare la repository sul prorpio IDE (https://github.com/tre02/progetto_is_nc16.git);
 
 
 Dopo aver clonato la repository, modificare nella classe ConPool il collegamento al database, inserendo all'interno la password personale di SQL.
